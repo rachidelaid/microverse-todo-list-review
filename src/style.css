@@ -1,0 +1,91 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #505050;
+}
+
+.dele {
+  display: none;
+}
+
+span,
+.clear {
+  cursor: pointer;
+}
+
+main {
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.head,
+.add,
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.active {
+  background-color: rgb(255, 255, 206);
+  color: orange;
+}
+
+.drag {
+  cursor: move;
+}
+
+.active .drag {
+  display: none;
+}
+
+.active .dele {
+  display: block;
+}
+
+.input {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #505050;
+  background-color: transparent;
+}
+
+.content {
+  display: flex;
+  gap: 10px;
+}
+
+.check:checked + .input {
+  text-decoration: line-through;
+}
+
+.clear {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+
+span:hover,
+.clear:hover {
+  color: #000;
+}
+
+.dragging {
+  transform: scale(0.9);
+  border: 1px dashed #505050;
+}
